@@ -22,7 +22,32 @@ You need to install minikube, kubectl and docker as a driver for minikube .
 Either clone this repository or fork it on GitHub and clone your fork:
 
 ```
-git clone https://github.com/mustafaabdelbadea/K8s-node.js-app-with-mongodb.git
+git clone git@github.com:mustafaabdelbadea/K8s-node.js-app-with-mongodb.git
 cd K8s-node.js-app-with-mongodb
 ```
+
+
+## Running
+### Start the minikube
+    ```
+    minikube start
+    ```
+### Create Config and Secret for MongoDB Credentials
+    ```
+    kubectl apply -f mongo-config.yml
+    kubectl apply -f mongo-secret.yml
+    ```
+ ### Create MongoDB Deployment
+    ```
+    kubectl apply -f mongo.yml
+    ```
+    
+ ### Create Webapp Deployment 
+    ```
+    kubectl apply -f webapp.yml
+    ```
+
+
+
+
 
