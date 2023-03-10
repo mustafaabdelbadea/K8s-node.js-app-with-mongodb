@@ -29,23 +29,39 @@ cd K8s-node.js-app-with-mongodb
 
 ## Running
 ### Start the minikube
-    ```
-    minikube start
-    ```
+
+```
+minikube start
+```
+    
 ### Create Config and Secret for MongoDB Credentials
-    ```
+ ```
     kubectl apply -f mongo-config.yml
     kubectl apply -f mongo-secret.yml
-    ```
+ ```
  ### Create MongoDB Deployment
-    ```
+  ```
     kubectl apply -f mongo.yml
-    ```
+  ```
     
  ### Create Webapp Deployment 
-    ```
+  ```
     kubectl apply -f webapp.yml
-    ```
+  ```
+  
+  ### Get minikube node's ip address
+```
+minikube ip
+```
+### To directly access service
+```
+minikube service webapp-service
+```
+
+### To stop cluster 
+```
+minikue stop
+```
 
 
 
